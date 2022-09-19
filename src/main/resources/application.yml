@@ -1,0 +1,36 @@
+app:
+    kafka:
+        bootstrap-servers: localhost:9092
+        streams:
+            state:
+                dir: ./stateStore/
+
+        topics:
+            input:
+                columnSeparator: ''
+                encoding: UTF-8
+                name: user-track-record-tsv-input
+                numberOfColumnsInRecord: 6
+
+            userTrackRecords:
+                name: user-track-records
+
+            userSessions:
+                name: user-sessions
+
+            allSessionUnderCommonKey:
+                name: all-session-under-common-key
+
+            topSessions:
+                name: top-sessions
+
+
+
+    musicSession:
+        gracePeriod: PT0S
+        ttl: PT20M
+
+    topSessions:
+        capacity:
+            overloadRate: 1.2
+            value: 50

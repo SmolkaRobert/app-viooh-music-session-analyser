@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.future-processing.smolkar'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter:2.7.3'
+    implementation 'org.springframework.kafka:spring-kafka:2.9.0'
+
+    implementation 'org.apache.kafka:kafka-streams:3.2.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.4'
+
+    compileOnly 'org.springframework.boot:spring-boot-dependencies:2.7.3'
+
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+}
